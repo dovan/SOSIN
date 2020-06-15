@@ -1,0 +1,118 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+<style>
+.bk-root .bk-tabs-header .bk-tab {
+    background-color: #F1F1F3;
+    width: 200px;
+    color: black;
+    
+
+    position: relative;
+    left: 400px; 
+    height:36px;
+    font-size:14px;
+}
+
+.bk-root .bk-tabs-header .bk-tab.bk-active{
+    background-color: #0095ba;
+    color: white;
+    font-style: normal;
+    position: relative;
+    
+    height:36px;
+    
+    
+}
+
+.bk-root .bk-tabs-header .bk-tab:hover{
+    background-color: #0095ba;
+    color: white;
+    position: relative;
+   
+    height:36px;
+}
+
+</style>
+
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="9f87d8ea-eb89-4730-b6d9-2e9e5bebd402" data-root-id="8347"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="8492">
+          {"a228a736-704b-43a7-97b5-84019f4b1f04":{"roots":{"references":[{"attributes":{"data_source":{"id":"8237","type":"ColumnDataSource"},"glyph":{"id":"8298","type":"HBar"},"hover_glyph":null,"muted_glyph":{"id":"8300","type":"HBar"},"nonselection_glyph":{"id":"8299","type":"HBar"},"selection_glyph":null,"view":{"id":"8302","type":"CDSView"}},"id":"8301","type":"GlyphRenderer"},{"attributes":{"label":{"value":"Married before 18 years of age"},"renderers":[{"id":"8319","type":"GlyphRenderer"}]},"id":"8328","type":"LegendItem"},{"attributes":{"text":"","text_color":{"value":"olive"},"text_font_size":{"value":"14pt"}},"id":"8312","type":"Title"},{"attributes":{},"id":"8341","type":"UnionRenderers"},{"attributes":{"data_source":{"id":"8237","type":"ColumnDataSource"},"glyph":{"id":"8284","type":"HBar"},"hover_glyph":null,"muted_glyph":{"id":"8286","type":"HBar"},"nonselection_glyph":{"id":"8285","type":"HBar"},"selection_glyph":null,"view":{"id":"8288","type":"CDSView"}},"id":"8287","type":"GlyphRenderer"},{"attributes":{"callback":null,"end":52},"id":"8241","type":"Range1d"},{"attributes":{},"id":"8326","type":"CategoricalTickFormatter"},{"attributes":{"callback":null,"end":52},"id":"8261","type":"Range1d"},{"attributes":{"axis_line_color":{"value":"#666666"},"formatter":{"id":"8294","type":"CategoricalTickFormatter"},"major_label_orientation":"horizontal","major_label_text_font_size":{"value":"10pt"},"minor_tick_in":-3,"minor_tick_out":6,"ticker":{"id":"8255","type":"CategoricalTicker"}},"id":"8254","type":"CategoricalAxis"},{"attributes":{},"id":"8250","type":"BasicTicker"},{"attributes":{"child":{"id":"8260","subtype":"Figure","type":"Plot"},"title":" Highest to Lowest Values"},"id":"8345","type":"Panel"},{"attributes":{"label":{"value":"Married before 15 years of age"},"renderers":[{"id":"8301","type":"GlyphRenderer"}]},"id":"8311","type":"LegendItem"},{"attributes":{},"id":"8294","type":"CategoricalTickFormatter"},{"attributes":{"fill_color":{"value":"#CC0F49"},"height":{"value":0.6},"line_color":{"value":"#CC0F49"},"right":{"field":"Before_15"},"y":{"field":"Social_Group"}},"id":"8330","type":"HBar"},{"attributes":{"click_policy":"hide","items":[{"id":"8296","type":"LegendItem"},{"id":"8311","type":"LegendItem"}]},"id":"8295","type":"Legend"},{"attributes":{"callback":null,"factors":["ALL NEPAL","Marwadi","Muslim","Tarai Janajati","Mt./Hill Janajati","Newar","Madhesi Dalit","Hill Dalit","Madhesi OC","Madhesi B/C","Hill Chhetri","Hill Brahmin"],"range_padding":0.03},"id":"8243","type":"FactorRange"},{"attributes":{},"id":"8275","type":"CategoricalTicker"},{"attributes":{"children":[{"id":"8346","type":"Tabs"}]},"id":"8347","type":"Column"},{"attributes":{"source":{"id":"8237","type":"ColumnDataSource"}},"id":"8288","type":"CDSView"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"height":{"value":0.6},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"right":{"field":"Before_15"},"y":{"field":"Social_Group"}},"id":"8331","type":"HBar"},{"attributes":{},"id":"8310","type":"Selection"},{"attributes":{},"id":"8247","type":"CategoricalScale"},{"attributes":{},"id":"8342","type":"Selection"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"8239","type":"HoverTool"}]},"id":"8258","type":"Toolbar"},{"attributes":{"callback":null,"point_policy":"follow_mouse","tooltips":"\n    &lt;style&gt;\n        .bk-tooltip&gt;div:not(:first-child) {display:none;}\n    &lt;/style&gt;\n    &lt;b&gt;Social Group: &lt;/b&gt; @Social_Group &lt;br&gt;\n    &lt;b&gt;Married before 18: &lt;/b&gt; @Before_18{0.0} &lt;br&gt;\n    &lt;b&gt;Married before 15: &lt;/b&gt; @Before_15{0.0} \n   \n"},"id":"8239","type":"HoverTool"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#fcc0a6"},"height":{"value":0.78},"line_alpha":{"value":0.1},"line_color":{"value":"#fcc0a6"},"right":{"field":"Before_18"},"y":{"field":"Social_Group"}},"id":"8286","type":"HBar"},{"attributes":{"fill_alpha":{"value":0.8},"fill_color":{"value":"#fcc0a6"},"height":{"value":0.78},"line_color":{"value":"#fcc0a6"},"right":{"field":"Before_18"},"y":{"field":"Social_Group"}},"id":"8316","type":"HBar"},{"attributes":{},"id":"8270","type":"BasicTicker"},{"attributes":{"background_fill_color":{"value":"#fbfbf1"},"below":[{"id":"8249","type":"LinearAxis"}],"center":[{"id":"8253","type":"Grid"},{"id":"8257","type":"Grid"},{"id":"8295","type":"Legend"}],"left":[{"id":"8254","type":"CategoricalAxis"}],"plot_height":500,"plot_width":800,"renderers":[{"id":"8287","type":"GlyphRenderer"},{"id":"8301","type":"GlyphRenderer"}],"title":{"id":"8280","type":"Title"},"toolbar":{"id":"8258","type":"Toolbar"},"x_range":{"id":"8241","type":"Range1d"},"x_scale":{"id":"8245","type":"LinearScale"},"y_range":{"id":"8243","type":"FactorRange"},"y_scale":{"id":"8247","type":"CategoricalScale"}},"id":"8240","subtype":"Figure","type":"Plot"},{"attributes":{"axis_line_color":{"value":"#666666"},"bounds":[0,55],"formatter":{"id":"8292","type":"BasicTickFormatter"},"major_tick_line_color":{"value":"#333333"},"minor_tick_in":-3,"minor_tick_line_color":{"value":"#333333"},"minor_tick_out":6,"ticker":{"id":"8250","type":"BasicTicker"}},"id":"8249","type":"LinearAxis"},{"attributes":{"callback":null,"tabs":[{"id":"8344","type":"Panel"},{"id":"8345","type":"Panel"}],"tabs_location":"below","width":800},"id":"8346","type":"Tabs"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"height":{"value":0.6},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"right":{"field":"Before_15"},"y":{"field":"Social_Group"}},"id":"8299","type":"HBar"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"height":{"value":0.78},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"right":{"field":"Before_18"},"y":{"field":"Social_Group"}},"id":"8285","type":"HBar"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"8239","type":"HoverTool"}]},"id":"8278","type":"Toolbar"},{"attributes":{},"id":"8292","type":"BasicTickFormatter"},{"attributes":{"data_source":{"id":"8238","type":"ColumnDataSource"},"glyph":{"id":"8330","type":"HBar"},"hover_glyph":null,"muted_glyph":{"id":"8332","type":"HBar"},"nonselection_glyph":{"id":"8331","type":"HBar"},"selection_glyph":null,"view":{"id":"8334","type":"CDSView"}},"id":"8333","type":"GlyphRenderer"},{"attributes":{"dimension":1,"grid_line_color":null,"ticker":{"id":"8275","type":"CategoricalTicker"}},"id":"8277","type":"Grid"},{"attributes":{"callback":null,"data":{"Before_15":{"__ndarray__":"MzMzMzMzH0CamZmZmZnZPwAAAAAAAAxAAAAAAAAA+D/NzMzMzMz8P5qZmZmZmbk/mpmZmZmZyT+amZmZmZkBQAAAAAAAAPh/AAAAAAAA+H8AAAAAAAD4fwAAAAAAAPh/","dtype":"float64","shape":[12]},"Before_18":{"__ndarray__":"zczMzMwMQECamZmZmZk+QM3MzMzMzDtAmpmZmZkZMUAzMzMzM7MwQGZmZmZmZitAmpmZmZmZKUAzMzMzMzMpQDMzMzMzMyZAzczMzMzMHkAAAAAAAAASQAAAAAAAAAAA","dtype":"float64","shape":[12]},"Social_Group":["Madhesi Dalit","Hill Dalit","Madhesi OC","ALL NEPAL","Mt./Hill Janajati","Hill Chhetri","Tarai Janajati","Muslim","Madhesi B/C","Hill Brahmin","Newar","Marwadi"],"index":[5,4,3,11,7,1,8,9,2,0,6,10]},"selected":{"id":"8342","type":"Selection"},"selection_policy":{"id":"8341","type":"UnionRenderers"}},"id":"8238","type":"ColumnDataSource"},{"attributes":{},"id":"8309","type":"UnionRenderers"},{"attributes":{"data_source":{"id":"8238","type":"ColumnDataSource"},"glyph":{"id":"8316","type":"HBar"},"hover_glyph":null,"muted_glyph":{"id":"8318","type":"HBar"},"nonselection_glyph":{"id":"8317","type":"HBar"},"selection_glyph":null,"view":{"id":"8320","type":"CDSView"}},"id":"8319","type":"GlyphRenderer"},{"attributes":{"axis_line_color":{"value":"#666666"},"formatter":{"id":"8326","type":"CategoricalTickFormatter"},"major_label_orientation":"horizontal","major_label_text_font_size":{"value":"10pt"},"minor_tick_in":-3,"minor_tick_out":6,"ticker":{"id":"8275","type":"CategoricalTicker"}},"id":"8274","type":"CategoricalAxis"},{"attributes":{"label":{"value":"Married before 18 years of age"},"renderers":[{"id":"8287","type":"GlyphRenderer"}]},"id":"8296","type":"LegendItem"},{"attributes":{"source":{"id":"8238","type":"ColumnDataSource"}},"id":"8320","type":"CDSView"},{"attributes":{"click_policy":"hide","items":[{"id":"8328","type":"LegendItem"},{"id":"8343","type":"LegendItem"}]},"id":"8327","type":"Legend"},{"attributes":{"fill_color":{"value":"#CC0F49"},"height":{"value":0.6},"line_color":{"value":"#CC0F49"},"right":{"field":"Before_15"},"y":{"field":"Social_Group"}},"id":"8298","type":"HBar"},{"attributes":{"dimension":1,"grid_line_color":null,"ticker":{"id":"8255","type":"CategoricalTicker"}},"id":"8257","type":"Grid"},{"attributes":{},"id":"8255","type":"CategoricalTicker"},{"attributes":{},"id":"8324","type":"BasicTickFormatter"},{"attributes":{"background_fill_color":{"value":"#fbfbf1"},"below":[{"id":"8269","type":"LinearAxis"}],"center":[{"id":"8273","type":"Grid"},{"id":"8277","type":"Grid"},{"id":"8327","type":"Legend"}],"left":[{"id":"8274","type":"CategoricalAxis"}],"plot_height":500,"plot_width":800,"renderers":[{"id":"8319","type":"GlyphRenderer"},{"id":"8333","type":"GlyphRenderer"}],"title":{"id":"8312","type":"Title"},"toolbar":{"id":"8278","type":"Toolbar"},"x_range":{"id":"8261","type":"Range1d"},"x_scale":{"id":"8265","type":"LinearScale"},"y_range":{"id":"8263","type":"FactorRange"},"y_scale":{"id":"8267","type":"CategoricalScale"}},"id":"8260","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"8245","type":"LinearScale"},{"attributes":{"fill_alpha":{"value":0.8},"fill_color":{"value":"#fcc0a6"},"height":{"value":0.78},"line_color":{"value":"#fcc0a6"},"right":{"field":"Before_18"},"y":{"field":"Social_Group"}},"id":"8284","type":"HBar"},{"attributes":{"ticker":{"id":"8250","type":"BasicTicker"}},"id":"8253","type":"Grid"},{"attributes":{"source":{"id":"8238","type":"ColumnDataSource"}},"id":"8334","type":"CDSView"},{"attributes":{},"id":"8267","type":"CategoricalScale"},{"attributes":{"child":{"id":"8240","subtype":"Figure","type":"Plot"},"title":" Social Groups alphabetical"},"id":"8344","type":"Panel"},{"attributes":{},"id":"8265","type":"LinearScale"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"height":{"value":0.78},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"right":{"field":"Before_18"},"y":{"field":"Social_Group"}},"id":"8317","type":"HBar"},{"attributes":{"axis_line_color":{"value":"#666666"},"bounds":[0,55],"formatter":{"id":"8324","type":"BasicTickFormatter"},"major_tick_line_color":{"value":"#333333"},"minor_tick_in":-3,"minor_tick_line_color":{"value":"#333333"},"minor_tick_out":6,"ticker":{"id":"8270","type":"BasicTicker"}},"id":"8269","type":"LinearAxis"},{"attributes":{"source":{"id":"8237","type":"ColumnDataSource"}},"id":"8302","type":"CDSView"},{"attributes":{"callback":null,"factors":["Marwadi","Newar","Hill Brahmin","Madhesi B/C","Muslim","Tarai Janajati","Hill Chhetri","Mt./Hill Janajati","ALL NEPAL","Madhesi OC","Hill Dalit","Madhesi Dalit"],"range_padding":0.03},"id":"8263","type":"FactorRange"},{"attributes":{"label":{"value":"Married before 15 years of age"},"renderers":[{"id":"8333","type":"GlyphRenderer"}]},"id":"8343","type":"LegendItem"},{"attributes":{"ticker":{"id":"8270","type":"BasicTicker"}},"id":"8273","type":"Grid"},{"attributes":{"callback":null,"data":{"Before_15":{"__ndarray__":"AAAAAAAA+H+amZmZmZm5PwAAAAAAAPh/AAAAAAAADECamZmZmZnZPzMzMzMzMx9AAAAAAAAA+H/NzMzMzMz8P5qZmZmZmck/mpmZmZmZAUAAAAAAAAD4fwAAAAAAAPg/","dtype":"float64","shape":[12]},"Before_18":{"__ndarray__":"zczMzMzMHkBmZmZmZmYrQDMzMzMzMyZAzczMzMzMO0CamZmZmZk+QM3MzMzMDEBAAAAAAAAAEkAzMzMzM7MwQJqZmZmZmSlAMzMzMzMzKUAAAAAAAAAAAJqZmZmZGTFA","dtype":"float64","shape":[12]},"Social_Group":["Hill Brahmin","Hill Chhetri","Madhesi B/C","Madhesi OC","Hill Dalit","Madhesi Dalit","Newar","Mt./Hill Janajati","Tarai Janajati","Muslim","Marwadi","ALL NEPAL"],"index":[0,1,2,3,4,5,6,7,8,9,10,11]},"selected":{"id":"8310","type":"Selection"},"selection_policy":{"id":"8309","type":"UnionRenderers"}},"id":"8237","type":"ColumnDataSource"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#CC0F49"},"height":{"value":0.6},"line_alpha":{"value":0.1},"line_color":{"value":"#CC0F49"},"right":{"field":"Before_15"},"y":{"field":"Social_Group"}},"id":"8300","type":"HBar"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#CC0F49"},"height":{"value":0.6},"line_alpha":{"value":0.1},"line_color":{"value":"#CC0F49"},"right":{"field":"Before_15"},"y":{"field":"Social_Group"}},"id":"8332","type":"HBar"},{"attributes":{"text":"","text_color":{"value":"olive"},"text_font_size":{"value":"14pt"}},"id":"8280","type":"Title"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#fcc0a6"},"height":{"value":0.78},"line_alpha":{"value":0.1},"line_color":{"value":"#fcc0a6"},"right":{"field":"Before_18"},"y":{"field":"Social_Group"}},"id":"8318","type":"HBar"}],"root_ids":["8347"]},"title":"Bokeh Application","version":"1.3.4"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('8492').textContent;
+                  var render_items = [{"docid":"a228a736-704b-43a7-97b5-84019f4b1f04","roots":{"8347":"9f87d8ea-eb89-4730-b6d9-2e9e5bebd402"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
