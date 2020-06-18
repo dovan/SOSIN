@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>SOSIN Dashboard</title>
+  <meta name="description" content="SOSIN Dashboard">
+  <meta name="SOSIN" content="SOSIN Dashboard">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+
+<div class="header"><h1>A Study on State of Social Inclusion in Nepal 2017-2020</h1>
+
+<h4>USAID/NEPAL & Central Department of Anthropology, Tribhuvan University, NEPAL</h4>
+	</div>
+
+	<div id="body_holder">
+		<div id="left_holder">
+			
+			<button id="chart_A" class="chart_buttons">Chart A</button>
+			<button id="chart_B" class="chart_buttons">Chart B</button>
+
+		
+		</div>
+		
+		<div id="right_holder">
+			<div id="chart_title_holder"></div>
+		
+		<div id="iframeHolder"></div>
+		</div>
+		
+		
+
+
+
+	</div>	
+		
+		
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+    $('#chart_A').click(function(){ 
+        		document.getElementById('chart_title_holder').innerHTML='Percentage of women aged 20-24 years who were married before 15 and 18 years';
+                $('#iframeHolder').html('<iframe id="iframe" src="marriage_ob.html" width="100%" height="800" style="border:none;"></iframe>');
+        
+    });  
+	
+	$('#chart_B').click(function(){ 
+        		document.getElementById('chart_title_holder').innerHTML='Percentage of population aged 18+ years who completed basic education by social groups, NSIS 2012 & 2018'; 
+
+                $('#iframeHolder').html('<iframe id="iframe" src="lollipop.html" width="100%" height="800"  style="border:none;"></iframe>');
+        
+    });  
+	
+});
+</script>
+ 
+	
+</body>
+</html>
