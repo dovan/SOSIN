@@ -24,6 +24,7 @@
 			
 			<button id="chart_A" class="chart_buttons">Chart A</button>
 			<button id="chart_B" class="chart_buttons">Chart B</button>
+            <button id="chart_C" class="chart_buttons">Chart C</button>
 
 		
 		</div>
@@ -31,7 +32,8 @@
 		<div id="right_holder">
 			<div id="chart_title_holder"></div>
 		
-		<div id="iframeHolder"></div>
+		<div id="iframeHolder">
+        <iframe src="" id="chart_html" width="100%" height="800" style="border:none;" ></iframe></div>
 		</div>
 		
 		
@@ -40,6 +42,8 @@
 
 	</div>	
 		
+        
+        lollipop.html
 		
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
@@ -47,17 +51,29 @@
 $(function(){
 	
     $('#chart_A').click(function(){ 
-        		document.getElementById('chart_title_holder').innerHTML='Percentage of women aged 20-24 years who were married before 15 and 18 years';
-                $('#iframeHolder').html('<iframe id="iframe" src="marriage_ob.html" width="100%" height="800" style="border:none;"></iframe>');
-        
+    generateChart('Percentage of women aged 20-24 years who were married before 15 and 18 years', 'marriage_ob.html');
+    
+            
     });  
 	
 	$('#chart_B').click(function(){ 
-        		document.getElementById('chart_title_holder').innerHTML='Percentage of population aged 18+ years who completed basic education by social groups, NSIS 2012 & 2018'; 
-
-                $('#iframeHolder').html('<iframe id="iframe" src="lollipop.html" width="100%" height="800"  style="border:none;"></iframe>');
-        
+    
+    generateChart('Percentage of population aged 18+ years who completed basic education by social groups, NSIS 2012 & 2018', 'lollipop.html');
+    
+               
     });  
+    
+    $('#chart_C').click(function(){ 
+        		generateChart('Levels of knowledge on representation of Dalits, minorities, and persons with disabilities, in elected bodies', 'knowledge_a_sb.html');
+        
+    }); 
+    
+    function generateChart(chart_title, chart_URL) {
+  		document.getElementById('chart_title_holder').innerHTML=chart_title; 
+        
+        document.getElementById("chart_html").src=chart_URL;
+               
+}
 	
 });
 </script>
