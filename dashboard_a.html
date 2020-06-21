@@ -12,31 +12,38 @@
 
 </head>
 
-<body>
+<body onload="loadChartContainer()">
 
-<div class="header"><h1>A Study on State of Social Inclusion in Nepal 2017-2020</h1>
+<div class="header"><h2>A Study on State of Social Inclusion in Nepal (SOSIN) 2017-2020</h2>
 
-<h4>USAID/NEPAL & Central Department of Anthropology, Tribhuvan University, NEPAL</h4>
+
+	</div>
+	
+	<div class="subheader"><a class="basic_link" href="index.html" >Home</a> > 	The State of Inclusive Governance in Nepal
 	</div>
 
 	<div id="body_holder">
+	
+	
 		<div id="left_holder">
 			
 			<button id="chart_A" class="chart_buttons">Chart A</button>
 			<button id="chart_B" class="chart_buttons">Chart B</button>
-            <button id="chart_C" class="chart_buttons">Chart C</button>=
+            <button id="chart_C" class="chart_buttons">Chart C</button>
 
 		
 		</div>
 		
 		<div id="right_holder">
-			<div id="chart_title_holder"></div>
+		
+		<div id="chart_container"  >
+		<div id="chart_title_holder"></div>
 		
 		<div id="iframeHolder">
-        <iframe src="" id="chart_html" width="100%" height="800" style="border:none;" ></iframe></div>
+        <iframe src="" id="chart_html" width="100%" height="560" style="border:none;" ></iframe></div>
 		</div>
 		
-		
+		</div>
 
 
 
@@ -48,6 +55,12 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 <script type="text/javascript">
+
+function loadChartContainer() {
+
+ generateChart('Percentage of women aged 20-24 years who were married before 15 and 18 years', 'marriage_ob.html');
+}
+
 $(function(){
 	
     $('#chart_A').click(function(){ 
@@ -68,14 +81,16 @@ $(function(){
         
     }); 
     
-    function generateChart(chart_title, chart_URL) {
+   
+	
+});
+
+ function generateChart(chart_title, chart_URL) {
   		document.getElementById('chart_title_holder').innerHTML=chart_title; 
         
         document.getElementById("chart_html").src=chart_URL;
                
 }
-	
-});
 </script>
  
 	
