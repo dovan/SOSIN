@@ -14,8 +14,11 @@
 
 <body onload="loadChartContainer()">
 
-<div class="header"><h2>A Study on State of Social Inclusion in Nepal (SOSIN) 2017-2020</h2>
+<div class="header">
+<div style="float:left; width: 60%; "><h2>A Study on State of Social Inclusion in Nepal (SOSIN) 2017-2020</h2></div>
 
+<div id="logo_holder"><div id="TU_logo" class="header_logo"><img src="images/TU_anthro_logo.png" alt="TU Logo" height="40"></div>
+			<div id="USAID_logo" class="header_logo"><img src="images/usaid_logo.png" alt="USAID Logo" height="40"></div></div>
 
 	</div>
 	
@@ -31,6 +34,7 @@
 			<button id="chart_B" class="chart_buttons">Chart B</button>
             <button id="chart_C" class="chart_buttons">Chart C</button>
 			<button id="chart_D" class="chart_buttons">Chart D</button>
+			<button id="chart_E" class="chart_buttons">Chart E</button>
 
 		
 		</div>
@@ -59,31 +63,36 @@
 
 function loadChartContainer() {
 
- generateChart('Percentage of women aged 20-24 years who were married before 15 and 18 years', 'marriage_ob.html');
+ generateChart('Percentage of women aged 20-24 years who were married before 15 and 18 years', 'charts/marriage_ob.html');
 }
 
 $(function(){
 	
     $('#chart_A').click(function(){ 
-    generateChart('Percentage of women aged 20-24 years who were married before 15 and 18 years', 'marriage_ob.html');
+    generateChart('Percentage of women aged 20-24 years who were married before 15 and 18 years', 'charts/marriage_ob.html');
     
             
     });  
 	
 	$('#chart_B').click(function(){ 
     
-    generateChart('Percentage of population aged 18+ years who completed basic education by social groups, NSIS 2012 & 2018', 'lollipop.html');
+    generateChart('Percentage of population aged 18+ years who completed basic education by social groups, NSIS 2012 & 2018', 'charts/lollipop.html');
     
                
     });  
     
     $('#chart_C').click(function(){ 
-        		generateChart('Levels of knowledge on representation of Dalits, minorities, and persons with disabilities, in elected bodies', 'knowledge_a_sb.html');
+        		generateChart('Levels of knowledge on representation of Dalits, minorities, and persons with disabilities, in elected bodies', 'charts/knowledge_a_sb.html');
         
     }); 
 	
 	$('#chart_D').click(function(){ 
-        		generateChart('Proficiency in Nepali Language by Sex and Social Groups', 'nepali_language.html');
+        		generateChart('Proficiency in Nepali Language by Sex and Social Groups', 'charts/nepali_language.html');
+        
+    }); 
+
+	$('#chart_E').click(function(){ 
+        		generateChart('Percent of households who rely on various sources during times of hardship, by social groups, NSIS 2018', 'charts/hardships_pie_stacked.html');
         
     }); 
     
