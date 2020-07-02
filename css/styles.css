@@ -20,8 +20,8 @@ background:#F4EDDB;
 .header {
 	width: 100%;
 	margin: auto;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 12px;
+	padding-bottom: 12px;
 	padding-left: 60px;
 	text-align:left;
 	background: #008ab5; 
@@ -247,7 +247,7 @@ box-shadow: 0px 2px 8px 0px rgba(8,8,8,0.53);}
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	
 	font-size:1em;
-	padding:4px 12px;
+	padding:2px 12px;
 	margin-bottom: 0px;
 	
 }

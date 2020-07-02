@@ -30,11 +30,13 @@
 	
 		<div id="left_holder">
 			
-			<button id="chart_A" class="chart_buttons">Chart A</button>
-			<button id="chart_B" class="chart_buttons">Chart B</button>
-            <button id="chart_C" class="chart_buttons">Chart C</button>
-			<button id="chart_D" class="chart_buttons">Chart D</button>
-			<button id="chart_E" class="chart_buttons">Chart E</button>
+			<button id="chart_A" class="chart_buttons">Section A</button>
+			<button id="chart_B" class="chart_buttons">Section B</button>
+            <button id="chart_C" class="chart_buttons">Section C</button>
+			<button id="chart_D" class="chart_buttons">Section D</button>
+			<button id="chart_E" class="chart_buttons">Section E</button>
+			<button id="chart_F" class="chart_buttons">Section F</button>
+
 
 		
 		</div>
@@ -60,6 +62,8 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 <script type="text/javascript">
+
+
 
 function loadChartContainer() {
 
@@ -87,12 +91,17 @@ $(function(){
     }); 
 	
 	$('#chart_D').click(function(){ 
-        		generateChart('Proficiency in Nepali Language by Sex and Social Groups', 'charts/nepali_language.html');
+        		generateChart('Proficiency in Nepali Language by Sex and Social Groups, NSIS 2018', 'charts/nepali_language.html');
         
     }); 
 
 	$('#chart_E').click(function(){ 
         		generateChart('Percent of households who rely on various sources during times of hardship, by social groups, NSIS 2018', 'charts/hardships_pie_stacked.html');
+        
+    }); 
+	
+	$('#chart_F').click(function(){ 
+        		generateChart('Representation at all levels of Civil Service by gender and social groups, 2019', 'charts/civil_service_index.html');
         
     }); 
     
