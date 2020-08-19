@@ -1,0 +1,71 @@
+<html>
+<head>
+<link rel="stylesheet" href="../css/styles.css?v=1.0">
+
+</head>
+
+ <body>
+    <div style="width: 100%; height: 100%;">
+	
+	<div>
+		<div style="width: 80px; float: left; text-align:right; border:0px"> <span style="font-weight: bold; font-size: 14px;">Select Data: </span></div>
+		<div style="margin-left: 100px; border:0px; padding-right:0px;">
+		<select name = "selectDataDropdown" class="dropdown_data" >
+            <option value = "first" selected>Percent of men and women who participated in the local development processes at the community level, NSIS 2018</option>
+            <option value = "second">Percent of men and women who felt their voices were heard while participating in development processes , NSIS 2018
+ </option>
+			<option value = "third">Percent of men and women who reported positively about their agency and capacity as rights holders by social groups, NSIS 2018</option>
+			<option value = "fourth">Percent of men and women who feel powerless and resourceless by social groups, NSIS 2018</option>
+			
+			
+		
+         </select>
+		</div>
+		
+	 </div>	
+	
+        <div style="width: 80%; height: 80%; float: left; border:0px; padding-left:20px; "> 
+           <iframe id='pyramid_chart_frame' src="pyramid/gender_pyramid.html" style="width: 100%; height: 90%; border:0px " ></iframe>
+        </div>
+		
+		
+		
+        
+<div >
+</div>
+        </div>
+    </div>
+	
+	
+		
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+$('select[name="selectDataDropdown"]').change(function(){
+  
+    if ($(this).val() == "first"){
+		document.getElementById("pyramid_chart_frame").src='pyramid/gender_pyramid.html';
+		}
+		
+	if ($(this).val() == "second"){
+        document.getElementById("pyramid_chart_frame").src='pyramid/gender_pyramid_2.html';
+		}
+		
+	if ($(this).val() == "third"){
+       document.getElementById("pyramid_chart_frame").src='pyramid/gender_pyramid_3.html';
+		}
+		
+	if ($(this).val() == "fourth"){
+       document.getElementById("pyramid_chart_frame").src='pyramid/gender_pyramid_4.html';
+		}
+		
+	
+    
+});
+
+
+</script>
+
+
+ </body>
+</html>

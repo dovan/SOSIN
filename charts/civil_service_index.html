@@ -14,10 +14,10 @@
 		<div>
 		<div style="width: 170px; float: left; text-align:right; border:0px"> <span style="font-weight: bold; font-size: 14px;">Select Data: </span></div>
 		<div style="margin-left: 182px; border:0px; padding-right:0px;">
-		<select name = "dropdown" class="dropdown_data" >
-            <option value = "test" selected>Representation at all levels of Civil Service</option>
-            <option value = "test">Representation in Gazetted Officer levels </option>
-			<option value = "test">Representation in Non-Gazetted Officer levels </option>
+		<select name = "selectDataDropdown" class="dropdown_data" >
+            <option value = "first" selected>Percent of male and female employees in the Nepali bureaucracy, 2019</option>
+            <option value = "second">Percent of male and female Gazetted Officers in the bureaucracy, 2019</option>
+			<option value = "third">Percent of male and female Non-Gazetted Officers in the bureaucracy, 2019</option>
 
          </select>
 		</div>
@@ -31,7 +31,7 @@
 		<label for="radio-one">Sunburst Chart</label>
 		<input type="radio" id="radio-two" name="switch-one" value="no" onclick="show_chartB()"/>
 		<label for="radio-two">Bar Chart</label>
-		<input type="radio" id="radio-three" name="switch-one" value="no" onclick="show_chartA()"/>
+		<input type="radio" id="radio-three" name="switch-one" value="no" onclick="show_chartC()"/>
 		<label for="radio-three">Treemap Chart</label>
 		</div>
 
@@ -44,7 +44,7 @@
         </div>
         
 		<div style="margin-left: 68%; border:0px; padding-right:0px;"> <div>
-            <iframe src="civil_service/civilservice_table.html" style="width: 100%; height: 85%; border:0px" ></iframe>
+            <iframe id="plotly_table_frame" src="civil_service/civilservice_table.html" style="width: 100%; height: 85%; border:0px" ></iframe>
 </div>
 <div >
 </div>
@@ -55,17 +55,26 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 <script type="text/javascript">
 
-function show_chartType() {
-        var chartType = document.getElementsByName("switch-one");
-        alert(chartType.value);
-    }
+var dataSource='first';
+var chartType='sunburst';
 
 function show_chartA() {
-        document.getElementById("plotly_chart_frame").src='civil_service/civilservice_sunburst.html';
+       
+		chartType='sunburst';
+		generateAllChartTable();
     }
 
 function show_chartB() {
-        document.getElementById("plotly_chart_frame").src='civil_service/civilservice_bars.html';
+        
+		chartType='bars';
+		generateAllChartTable();
+    }
+	
+function show_chartC() {
+        
+		chartType='treemap';
+		generateAllChartTable();
+
     }
 	
 $(function(){
@@ -86,6 +95,62 @@ $(function(){
     }); 
 
 });
+
+$('select[name="selectDataDropdown"]').change(function(){
+  
+    if ($(this).val() == "first"){
+		dataSource='first';
+		document.getElementById("plotly_table_frame").src='civil_service/civilservice_table.html';
+		generateAllChartTable();
+		
+		
+		}
+	if ($(this).val() == "second"){
+        dataSource='second';
+		document.getElementById("plotly_table_frame").src='civil_service/civilservice_table_2.html';
+		generateAllChartTable();
+		}
+		
+	if ($(this).val() == "third"){
+       dataSource='third';
+	   document.getElementById("plotly_table_frame").src='civil_service/civilservice_table_3.html';
+		generateAllChartTable();
+		
+		}
+    
+});
+
+function generateAllChartTable(){
+	
+	if (dataSource=='first'){
+	
+	
+	if(chartType=='sunburst') document.getElementById("plotly_chart_frame").src='civil_service/civilservice_sunburst.html';
+		if(chartType=='bars') document.getElementById("plotly_chart_frame").src='civil_service/civilservice_bars.html';
+		if(chartType=='treemap') document.getElementById("plotly_chart_frame").src='civil_service/civilservice_treemap.html';
+	}
+	
+	if (dataSource=='second'){
+	
+	
+	if(chartType=='sunburst') document.getElementById("plotly_chart_frame").src='civil_service/civilservice_sunburst_2.html';
+		if(chartType=='bars') document.getElementById("plotly_chart_frame").src='civil_service/civilservice_bars_2.html';
+		if(chartType=='treemap') document.getElementById("plotly_chart_frame").src='civil_service/civilservice_treemap_2.html';
+	}
+	
+	
+	if (dataSource=='third'){
+	
+	if(chartType=='sunburst') document.getElementById("plotly_chart_frame").src='civil_service/civilservice_sunburst_3.html';
+		if(chartType=='bars') document.getElementById("plotly_chart_frame").src='civil_service/civilservice_bars_3.html';
+		if(chartType=='treemap') document.getElementById("plotly_chart_frame").src='civil_service/civilservice_treemap_3.html';
+	}
+	
+	
+	
+	
+	
+	}
 
 </script>
 	

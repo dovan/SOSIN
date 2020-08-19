@@ -1,0 +1,54 @@
+<html>
+<head></head>
+ <body>
+    <div style="width: 100%; height: 100%;">
+	<div >
+			
+			<button id="plotly_chart_A" class="chart_buttons">Sunburst Chart</button>
+			<button id="plotly_chart_B" class="chart_buttons">Bar Chart</button>
+            
+
+		
+		</div>
+		
+		
+        <div style="width: 60%; height: 100%; float: left; border:0px "> 
+           <iframe id="plotly_chart_frame" src="civilservice_sunburst.html" style="width: 100%; height: 90%; border:0px " ></iframe>
+        </div>
+        <div style="margin-left: 62%; border:0px; padding-right:100px;"> <div>
+            <iframe src="civilservice_table.html" style="width: 100%; height: 70%; border:0px" ></iframe>
+</div>
+<div >
+</div>
+        </div>
+    </div>
+	
+	
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+
+$(function(){
+	
+    $('#plotly_chart_A').click(function(){ 
+	
+	document.getElementById("plotly_chart_frame").src='civilservice_sunburst.html';
+    
+    
+            
+    });  
+	
+	$('#plotly_chart_B').click(function(){ 
+    
+	document.getElementById("plotly_chart_frame").src='civilservice_bars.html';
+    
+               
+    }); 
+
+});
+
+</script>
+	
+ </body>
+</html>

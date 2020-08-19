@@ -1,33 +1,79 @@
 <html>
-<head></head>
+<head>
+
+<link rel="stylesheet" href="../css/styles.css?v=1.0">
+
+</head>
  <body>
     <div style="width: 100%; height: 100%;">
 	
 	<div>
 		<div style="width: 170px; float: left; text-align:right; border:0px"> <span style="font-weight: bold; font-size: 14px;">Sort By: </span></div>
 		<div style="margin-left: 182px; border:0px; padding-right:0px;">
-		<select name = "dropdown" class="dropdown_data" >
-            <option value = "test" selected>Traditional Institutions/ Relatives</option>
-            <option value = "test">Representation in Gazetted Officer levels </option>
-			<option value = "test">Representation in Non-Gazetted Officer levels </option>
-
+		<select name = "sortDataDropdown" class="dropdown_data" >
+            <option value = "first" selected>Social Groups</option>
+            <option value = "second">Traditional Institutions/ Relatives	 </option>
+			<option value = "third">Community/ Friends </option>
+			<option value = "fourth">Cooperatives </option>
+			<option value = "fifth">Financial Institutions	 </option>
+			<option value = "sixth">Money Lenders </option>
+			
+		
          </select>
 		</div>
 		
 	 </div>	
 	
-        <div style="width: 67%; height: 100%; float: left; border:0px "> 
-           <iframe src="hardships_stacked.html" style="width: 100%; height: 90%; border:0px " ></iframe>
+        <div style="width: 67%; height: 98%; float: left; border:0px "> 
+           <iframe id='hardships_chart_frame' src="hardships/hardships_stacked.html" style="width: 100%; height: 90%; border:0px " ></iframe>
         </div>
 		
 		
 		
         <div style="margin-left: 68%; border:0px; padding-top:20px; padding-right:0px;"> <div>
-            <iframe src="hardships_pie.html" style="width: 100%; height: 60%; border:0px " ></iframe>
+            <iframe src="hardships/hardships_pie.html" style="width: 100%; height: 60%; border:0px " ></iframe>
 </div>
 <div >
 </div>
         </div>
     </div>
+	
+	
+		
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+$('select[name="sortDataDropdown"]').change(function(){
+  
+    if ($(this).val() == "first"){
+		document.getElementById("hardships_chart_frame").src='hardships/hardships_stacked.html';
+		}
+		
+	if ($(this).val() == "second"){
+        document.getElementById("hardships_chart_frame").src='hardships/hardships_stacked_2.html';
+		}
+		
+	if ($(this).val() == "third"){
+       document.getElementById("hardships_chart_frame").src='hardships/hardships_stacked_3.html';
+		}
+		
+	if ($(this).val() == "fourth"){
+       document.getElementById("hardships_chart_frame").src='hardships/hardships_stacked_4.html';
+		}
+		
+	if ($(this).val() == "fifth"){
+       document.getElementById("hardships_chart_frame").src='hardships/hardships_stacked_5.html';
+		}
+	
+	if ($(this).val() == "sixth"){
+       document.getElementById("hardships_chart_frame").src='hardships/hardships_stacked_6.html';
+		}
+    
+});
+
+
+</script>
+
+
  </body>
 </html>
