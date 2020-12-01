@@ -1,0 +1,221 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>SOSIN Dashboard</title>
+  <meta name="description" content="SOSIN Dashboard">
+  <meta name="SOSIN" content="SOSIN Dashboard">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+</head>
+
+<body onload="loadChartContainer()">
+
+<div class="header">
+<div style="float:left; width: 60%; "><h2>A Study on State of Social Inclusion in Nepal (SOSIN) 2017-2020</h2></div>
+
+<div id="logo_holder"><div id="TU_logo" class="header_logo"><img src="images/TU_anthro_logo.png" alt="TU Logo" height="40"></div>
+			<div id="USAID_logo" class="header_logo"><img src="images/usaid_logo.png" alt="USAID Logo" height="40"></div></div>
+
+	</div>
+	
+	<div class="subheader"><a class="basic_link" href="index.html" >Home</a> > 	Community Resilience Capacity
+	</div>
+
+	<div id="body_holder">
+	
+	<div id="list_holder">
+	1. Introduction
+	
+		<ul >
+		
+			<li id="chart_AA" >1.1</li>
+			
+		</ul >
+		
+		2. Effects of Disaster
+		<ul >
+			<li id="chart_A" >3.1</li>
+			<li id="chart_B" >3.4</li>
+			
+		</ul >
+		
+		4. Four Years of Recovery
+		<ul >
+            <li id="chart_C" >4.5</li>
+			
+		</ul >
+		5. Household Resilience Capacity
+		<ul >
+			<li id="chart_D" >5.4</li>
+			<li id="chart_E" >5.5</li>
+			<li id="chart_F" >5.7</li>
+			
+			<li id="chart_G" >5.9</li>
+			<li id="chart_H" >5.10</li>
+			<li id="chart_I" >5.12</li>
+			<li id="chart_J" >5.16</li>
+
+		
+		</ul>
+		
+		</div>
+		<div id="right_holder">
+		
+		<div id="chart_container"  >
+		<div id="chart_title_holder"></div>
+		
+		<div id="iframeHolder">
+        <iframe src="" id="chart_html" width="100%" height="550" style="border:none;" ></iframe></div>
+		
+		<div id="nextButton_holder"> 
+		<a href="#" id="nextLink">< NEXT</a>
+		&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="#" id="previousLink">PREVIOUS ></a> 
+		
+		</div>
+		</div>
+		
+		
+		</div>
+
+		
+
+
+	</div>	
+		
+        
+        
+		
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+var currentChart=0;
+
+var chartTitles = ["Table 1.1: Population of earthquake affected Districts by social group, 2011", 
+"Figure 3.1: Deaths in the 2015 earthquakes by District, CRS 2019s",
+'Figure 3.4: Percentage of physical injuries and psycho-social problems caused by 2015 earthquake, CRS 2019',
+'Figure 4.5: Percentage of people who received and used training for livelihood improvement by social groups, CRS 2019',
+'Figure 5.4: Educational status (age 6 and above) by social group, CRS 2019',
+'Figure 5.5: Educational status (age 6 and above) by social group and sex, CRS 2019',
+'Figure 5.7: Percentage of households with access to information and communication technologies by social group, CRS 2019',
+'Figure 5.9: Percentage of households with access to major services by social group, CRS 2019',
+'Figure 5.10: Percentage of households with vulnerable demographic characteristics, CRS 2019',
+'Figure 5.12: Social capital: percentage of households who provided and received help, CRS 2019',
+'Figure 5.16: Percentage of people without birth and citizenship certificate by social group, CRS 2019'
+];
+
+var chartPaths =['charts/resilience/resilience_1_1.html',
+'charts/resilience/resilience_3_1.html',
+'charts/resilience/resilience_3_4.html',
+'charts/resilience/resilience_4_5.html',
+'charts/resilience/resilience_5_4.html',
+'charts/resilience/resilience_5_5.html',
+'charts/resilience/resilience_5_7.html',
+'charts/resilience/resilience_5_9.html',
+'charts/resilience/resilience_5_10.html',
+ 'charts/resilience/resilience_5_12.html',
+ 'charts/resilience/resilience_5_16.html'
+];
+
+function loadChartContainer() {
+
+	generateChart(chartTitles[0], chartPaths[0]);
+}
+
+$(function(){
+
+	$('#chart_AA').click(function(){ 
+   generateChart(chartTitles[0],chartPaths[0] );
+    currentChart=0;
+            
+    });  
+	
+    $('#chart_A').click(function(){ 
+    generateChart(chartTitles[1], chartPaths[1]);
+    currentChart=1;
+            
+            
+    });  
+	
+	$('#chart_B').click(function(){ 
+    
+    generateChart(chartTitles[2],chartPaths[2] );
+	currentChart=2;
+    
+               
+    });  
+    
+    $('#chart_C').click(function(){ 
+        		generateChart(chartTitles[3], chartPaths[3]);
+				currentChart=3;
+        
+    }); 
+	
+	$('#chart_D').click(function(){ 
+        		generateChart(chartTitles[4], chartPaths[4]);
+				currentChart=4;
+    }); 
+
+	$('#chart_E').click(function(){ 
+        		generateChart(chartTitles[5], chartPaths[5]);
+				currentChart=5;
+    }); 
+	
+	$('#chart_F').click(function(){ 
+        		generateChart(chartTitles[6], chartPaths[6]);
+				currentChart=6;
+    }); 
+	
+	$('#chart_G').click(function(){ 
+        		generateChart(chartTitles[7], chartPaths[7]);
+				currentChart=7;
+    });
+	
+	$('#chart_H').click(function(){ 
+        		generateChart(chartTitles[8], chartPaths[8]);
+				currentChart=8;
+    });
+	
+	$('#chart_I').click(function(){ 
+        		generateChart(chartTitles[9],chartPaths[9]);
+				currentChart=9;
+    });
+	
+	$('#chart_J').click(function(){ 
+        		generateChart(chartTitles[10], chartPaths[10]);
+				currentChart=10;
+    });
+    
+   
+	
+});
+
+$('#nextLink').click(function(){ 
+
+	if (currentChart<(chartTitles.length-1)) currentChart++;
+	generateChart(chartTitles[currentChart],chartPaths[currentChart] );
+return false; });
+
+$('#previousLink').click(function(){ 
+
+	if (currentChart>0) currentChart--;
+	generateChart(chartTitles[currentChart],chartPaths[currentChart] );
+return false; });
+
+function generateChart(chart_title, chart_URL) {
+  		document.getElementById('chart_title_holder').innerHTML=chart_title; 
+        
+        document.getElementById("chart_html").src=chart_URL;
+               
+}
+</script>
+ 
+	
+</body>
+</html>
