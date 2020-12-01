@@ -75,16 +75,44 @@ background:#F4EDDB;
   width: 100%;
   margin: auto;
   padding-top: 10px;
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 
 	display: flex;
 	 background-color: #f3f3f3;
 	 
 }
+
+#body_holder_white {
+  width: 100%;
+  margin: auto;
+  padding-top: 10px;
+	padding-bottom: 40px;
+
+	display: flex;
+	 background-color: #ffffff;
+	 
+}
+
 #left_holder {
   flex: 0 0 20%;
 	padding-top: 40px;
 }
+
+#list_holder {
+  
+	padding-top: 20px;
+	padding-left: 40px;
+	 display: flex;
+	 justify-content: left;
+  align-items: left;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+	 
+	 width: 20%;
+}
+
 
 #right_holder {
   flex: 1;
@@ -103,6 +131,34 @@ background:#F4EDDB;
 	color:brown;
 	font-weight: bold;
 	
+}
+
+#nextButton_holder{
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	font-size: 1.1em;
+	
+	color:#cccccc;
+	font-weight: bold;
+	display:flex;
+	border-top: 2px solid #cccccc;
+	width:100%;
+	align-content:flex-end;
+	direction: rtl;
+	font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:100;
+	letter-spacing:1px;
+
+	
+}
+
+#nextButton_holder a{
+	color:#0D779F;
+	text-decoration:none;
+	font-weight:bold;
 }
 
 /*******Headers********/
@@ -278,6 +334,8 @@ box-shadow: 0px 2px 2px 0px rgba(8,8,8,0.57);
 
 }
 
+
+
 a.basic_link:link {
 	color:inherit;
 	text-decoration:none;
@@ -400,3 +458,41 @@ a.bare_link:hover {
 }
 
 /***************DivTable Ends*********************/
+
+/***************ListStyle Starts*********************/
+
+
+div#list_holder ul{
+	list-style-type: none;
+	display:flex;  
+	margin-top:2px;
+	margin-bottom:6px;
+	margin-left: 16px;
+	padding:0px;
+	flex-wrap: wrap;
+	
+}
+
+div#list_holder ul li{
+	display: inline;
+	margin-top: 6px;
+	margin-right: 8px;
+	
+	line-height: 1.5;
+	border: 1px solid #cccccc;
+	border-radius: 20%;
+	
+	padding-left:4px;
+	padding-right:4px;
+	padding-top:2px;
+	padding-bottom:2px;
+	font-size:.9em;
+	cursor: pointer;
+	background-color:#ffffff;
+	color:#0D779F;
+	
+
+}
+
+/***************ListStyle Ends*********************/
+
